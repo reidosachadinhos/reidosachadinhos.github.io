@@ -3,15 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="theme-color" content="#FFE600" />
-  <meta name="description" content="Entre no grupo Rei dos Achadinhos Brasil e receba ofertas e cupons exclusivos do Mercado Livre direto no WhatsApp." />
-  <title>Rei dos Achadinhos Brasil | Ofertas Mercado Livre</title>
+  <meta name="theme-color" content="#0E5730" />
+  <meta name="description" content="Grupo gratuito de ofertas do Mercado Livre no WhatsApp. Achadinhos e cupons todo dia." />
+  <title>Rei dos Achadinhos Brasil</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,700;10..48,800&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
 
-  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TTKGBS9V7H"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -21,395 +20,437 @@
   </script>
 
   <style>
-    :root{
-      --yellow: #FFE600;
-      --yellow-deep: #FFD600;
-      --gold: #F5B700;
-      --gold-dark: #B38600;
-      --green: #00A650;
-      --green-dark: #007A3A;
-      --black: #1A1A1A;
-      --text: #333333;
-      --muted: #666666;
-      --bg: #F8F9FA;
-      --white: #FFFFFF;
-      --line: #E5E5E5;
-      --radius: 24px;
-      --shadow-sm: 0 4px 12px rgba(0,0,0,.05);
-      --shadow-lg: 0 24px 48px rgba(0,0,0,.08);
+    :root {
+      --green:      #0E5730;
+      --green-mid:  #116B38;
+      --green-lite: #E6F4ED;
+      --yellow:     #FFE600;
+      --gold-dark:  #9A6E00;
+      --black:      #0A0A0A;
+      --text:       #1C1C1C;
+      --muted:      #6B6B6B;
+      --white:      #FFFFFF;
     }
 
-    *{ margin: 0; padding: 0; box-sizing: border-box; }
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html { -webkit-text-size-adjust:100%; }
 
-    html{ scroll-behavior: smooth; }
-
-    body{
-      background-color: var(--bg);
-      color: var(--text);
-      font-family: "Sora", Arial, sans-serif;
-      overflow-x: hidden;
-      line-height: 1.5;
+    body {
+      min-height: 100dvh;
+      font-family: "DM Sans", sans-serif;
+      background: var(--green);
+      display: grid;
+      place-items: center;
+      padding: 16px;
+      position: relative;
+      overflow: hidden;
     }
 
-    .container {
-      max-width: 540px;
-      margin: 0 auto;
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,.04) 1px, transparent 0);
+      background-size: 22px 22px;
+      pointer-events: none;
+    }
+
+    .blob {
+      position: fixed;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .blob-1 {
+      width: 320px; height: 320px;
+      top: -100px; left: -100px;
+      background: radial-gradient(circle, rgba(255,230,0,.12), transparent 65%);
+    }
+    .blob-2 {
+      width: 260px; height: 260px;
+      bottom: -80px; right: -80px;
+      background: radial-gradient(circle, rgba(255,255,255,.06), transparent 65%);
+    }
+
+    /* ── CARD ── */
+    .card {
+      position: relative;
+      z-index: 1;
+      width: min(100%, 400px);
       background: var(--white);
-      min-height: 100vh;
-      box-shadow: var(--shadow-lg);
-      position: relative;
+      border-radius: 32px;
+      overflow: hidden;
+      box-shadow:
+        0 2px 4px rgba(0,0,0,.06),
+        0 12px 32px rgba(0,0,0,.2),
+        0 48px 80px rgba(0,0,0,.24);
+      animation: rise .48s cubic-bezier(.2,.8,.2,1) both;
     }
 
-    /* Hero Section */
-    .hero {
-      background: linear-gradient(145deg, var(--yellow) 0%, var(--yellow-deep) 100%);
-      padding: 40px 24px 30px;
+    .card-bar {
+      height: 5px;
+      background: linear-gradient(90deg, var(--green), var(--yellow) 50%, var(--green));
+    }
+
+    /* ── HEADER ── */
+    .card-header {
+      background: linear-gradient(160deg, #0A3D21 0%, var(--green-mid) 100%);
+      padding: 24px 22px 22px;
       text-align: center;
-      border-bottom-left-radius: 40px;
-      border-bottom-right-radius: 40px;
       position: relative;
+      overflow: hidden;
     }
 
-    .tag {
+    .card-header::after {
+      content: "";
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      background: rgba(255,230,0,.05);
+      pointer-events: none;
+    }
+
+    .live-pill {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 6px 14px;
-      border-radius: 999px;
-      background: rgba(0, 0, 0, 0.08);
-      color: var(--black);
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: .05em;
-      text-transform: uppercase;
-      margin-bottom: 24px;
-    }
-
-    .tag span {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--green);
-      box-shadow: 0 0 0 3px rgba(0,166,80,.20);
-      animation: pulse 2s infinite;
-    }
-
-    .logo {
-      width: 90px;
-      height: 90px;
-      margin: 0 auto 16px;
-      border-radius: 28px;
-      background: var(--white);
-      padding: 4px;
-      box-shadow: var(--shadow-sm);
-    }
-
-    .logo img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      border-radius: 24px;
-    }
-
-    .brand {
-      color: var(--green-dark);
-      font-size: 12px;
-      font-weight: 800;
+      gap: 6px;
+      background: rgba(255,230,0,.13);
+      border: 1px solid rgba(255,230,0,.28);
+      color: var(--yellow);
+      font-size: 10px;
+      font-weight: 600;
       letter-spacing: .1em;
       text-transform: uppercase;
-      margin-bottom: 12px;
+      padding: 5px 11px;
+      border-radius: 999px;
+      margin-bottom: 18px;
     }
 
-    h1 {
+    .live-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--yellow);
+      animation: blink 1.8s ease-in-out infinite;
+    }
+
+    .logo-wrap {
+      width: 76px; height: 76px;
+      margin: 0 auto 14px;
+      border-radius: 22px;
+      overflow: hidden;
+      background: var(--white);
+      box-shadow: 0 8px 28px rgba(0,0,0,.28);
+      border: 2px solid rgba(255,255,255,.15);
+      position: relative;
+    }
+
+    .logo-wrap img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .brand-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.42);
+      margin-bottom: 10px;
+    }
+
+    .headline {
       font-family: "Bricolage Grotesque", sans-serif;
-      font-size: clamp(32px, 8vw, 42px);
-      line-height: 1.1;
-      letter-spacing: -1.5px;
+      font-size: clamp(30px, 8vw, 38px);
       font-weight: 800;
-      color: var(--black);
-      margin-bottom: 16px;
+      line-height: .9;
+      letter-spacing: -1.6px;
+      color: var(--white);
     }
 
-    .sub {
-      font-size: 15px;
-      font-weight: 500;
-      color: rgba(26, 26, 26, 0.8);
-      max-width: 90%;
-      margin: 0 auto 24px;
+    .headline em {
+      font-style: normal;
+      color: var(--yellow);
     }
 
-    /* Social Proof */
-    .social-proof {
+    /* ── BODY ── */
+    .card-body {
+      padding: 20px 20px 18px;
+    }
+
+    .perks {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .perk {
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 12px;
-      margin-bottom: 24px;
-      background: rgba(255, 255, 255, 0.5);
-      padding: 10px 16px;
-      border-radius: 16px;
-      display: inline-flex;
+      gap: 11px;
+      padding: 11px 13px;
+      background: #F6F6F3;
+      border: 1px solid rgba(0,0,0,.06);
+      border-radius: 14px;
     }
 
-    .stars { color: #FF9900; font-size: 18px; letter-spacing: 2px;}
-    .proof-text { font-size: 12px; font-weight: 600; color: var(--black); }
+    .perk-icon { font-size: 20px; line-height: 1; flex-shrink: 0; }
 
-    /* CTA Button */
-    .cta-container {
-      padding: 0 24px;
-      margin-top: -24px;
-      position: relative;
-      z-index: 10;
+    .perk-text {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.15;
     }
 
+    .perk-text small {
+      display: block;
+      font-size: 11.5px;
+      font-weight: 400;
+      color: var(--muted);
+      margin-top: 1px;
+    }
+
+    .affiliate-badge {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      background: var(--green-lite);
+      border: 1px solid rgba(14,87,48,.18);
+      border-radius: 12px;
+      padding: 10px 13px;
+      margin-bottom: 18px;
+    }
+
+    .affiliate-icon { font-size: 18px; flex-shrink: 0; }
+
+    .affiliate-text {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--green);
+      line-height: 1.3;
+    }
+
+    .affiliate-text span {
+      font-weight: 400;
+      color: #3A7A56;
+    }
+
+    /* CTA */
     .cta {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 12px;
+      gap: 10px;
       width: 100%;
-      padding: 18px;
+      min-height: 64px;
       border-radius: 20px;
-      background: var(--green);
-      color: var(--white);
+      background: linear-gradient(180deg, #FFE94D 0%, #FFD000 55%, #F0BC00 100%);
+      color: var(--black);
       text-decoration: none;
       font-family: "Bricolage Grotesque", sans-serif;
-      font-size: 22px;
+      font-size: clamp(21px, 5.8vw, 27px);
       font-weight: 800;
-      box-shadow: 0 8px 24px rgba(0, 166, 80, 0.3);
-      transition: all 0.2s ease;
+      letter-spacing: -.7px;
+      box-shadow: 0 8px 0 var(--gold-dark), 0 16px 36px rgba(0,0,0,.2);
+      transition: transform .12s ease, box-shadow .12s ease;
+      -webkit-tap-highlight-color: transparent;
+      position: relative;
+      overflow: hidden;
     }
 
-    .cta:hover { background: var(--green-dark); transform: translateY(-2px); }
-    .cta:active { transform: translateY(2px); box-shadow: 0 4px 12px rgba(0, 166, 80, 0.2); }
-    .cta svg { width: 28px; height: 28px; fill: var(--white); }
+    .cta::before {
+      content: "";
+      position: absolute;
+      inset: -50% auto -50% -40%;
+      width: 32%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.55), transparent);
+      transform: skewX(-20deg);
+      animation: shine 3.4s ease-in-out infinite;
+      pointer-events: none;
+    }
 
-    .note {
+    .cta:active {
+      transform: translateY(5px);
+      box-shadow: 0 3px 0 var(--gold-dark), 0 8px 18px rgba(0,0,0,.16);
+    }
+
+    .cta svg { width: 26px; height: 26px; flex-shrink: 0; position: relative; z-index: 1; }
+    .cta-label { position: relative; z-index: 1; }
+
+    .hint {
       text-align: center;
-      font-size: 12px;
-      color: var(--muted);
-      margin-top: 12px;
+      margin-top: 10px;
+      font-size: 11.5px;
       font-weight: 500;
+      color: var(--muted);
     }
 
-    /* Benefits Section */
-    .section { padding: 40px 24px; }
-    
-    .section-title {
-      font-family: "Bricolage Grotesque", sans-serif;
-      font-size: 24px;
-      font-weight: 800;
-      text-align: center;
-      margin-bottom: 24px;
-      color: var(--black);
-    }
-
-    .benefits-grid {
-      display: grid;
-      gap: 16px;
-    }
-
-    .benefit-card {
-      background: #F8F9FA;
-      border: 1px solid var(--line);
-      padding: 16px;
-      border-radius: 16px;
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-    }
-
-    .benefit-icon {
-      background: rgba(255, 230, 0, 0.2);
-      width: 48px;
-      height: 48px;
-      border-radius: 12px;
+    /* FOOTER */
+    .card-footer {
+      padding: 12px 20px 16px;
+      border-top: 1px solid rgba(0,0,0,.06);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 24px;
-      flex-shrink: 0;
+      gap: 12px;
     }
 
-    .benefit-text h3 {
-      font-size: 15px;
-      font-weight: 700;
-      margin-bottom: 4px;
-      color: var(--black);
-    }
-
-    .benefit-text p {
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    /* FAQ Section */
-    .faq-item {
-      border-bottom: 1px solid var(--line);
-      padding: 16px 0;
-    }
-
-    .faq-item:last-child { border-bottom: none; }
-
-    .faq-q {
-      font-weight: 700;
-      font-size: 14px;
-      color: var(--black);
-      margin-bottom: 8px;
-    }
-
-    .faq-a {
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    /* Footer */
-    .footer {
-      background: var(--black);
-      color: var(--white);
-      padding: 32px 24px;
-      text-align: center;
-      border-top-left-radius: 24px;
-      border-top-right-radius: 24px;
-    }
-
-    .footer-disclaimer {
-      font-size: 11px;
-      color: #A0A0A0;
-      margin-bottom: 16px;
-    }
-
-    .footer-disclaimer strong { color: var(--white); }
-
-    .footer-links {
+    .footer-item {
       display: flex;
-      justify-content: center;
-      gap: 16px;
-      font-size: 12px;
+      align-items: center;
+      gap: 4px;
+      font-size: 10.5px;
+      font-weight: 600;
+      color: #8A8A8A;
     }
 
-    .footer-links a { color: var(--yellow); text-decoration: none; font-weight: 600; }
-    .footer-links a:hover { text-decoration: underline; }
+    .footer-item svg {
+      width: 12px; height: 12px;
+      stroke: var(--green);
+      fill: none;
+      stroke-width: 2.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
 
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(0,166,80,.4); }
-      70% { box-shadow: 0 0 0 6px rgba(0,166,80, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(0,166,80, 0); }
+    .sep { color: rgba(0,0,0,.15); }
+
+    @keyframes rise {
+      from { opacity:0; transform: translateY(20px) scale(.97); }
+      to   { opacity:1; transform: translateY(0) scale(1); }
+    }
+    @keyframes blink {
+      0%,100% { opacity:1; }
+      50%      { opacity:.25; }
+    }
+    @keyframes shine {
+      0%,55%   { left: -42%; }
+      80%,100% { left: 115%; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
+    }
+
+    @media (max-width: 360px) {
+      body { padding: 10px; }
+      .card-header { padding: 20px 16px 18px; }
+      .card-body { padding: 16px 16px 14px; }
     }
   </style>
 </head>
 <body>
+  <div class="blob blob-1" aria-hidden="true"></div>
+  <div class="blob blob-2" aria-hidden="true"></div>
 
-  <main class="container">
-    
-    <!-- Header / Hero -->
-    <section class="hero">
-      <div class="tag">
-        <span aria-hidden="true"></span> Acesso Liberado Hoje
+  <main>
+    <article class="card" aria-label="Convite para o grupo de ofertas do WhatsApp">
+
+      <div class="card-bar" aria-hidden="true"></div>
+
+      <div class="card-header">
+        <div class="live-pill">
+          <span class="live-dot" aria-hidden="true"></span>
+          Grupo gratuito
+        </div>
+
+        <div class="logo-wrap">
+          <img src="coroa-rei.png" alt="Logo Rei dos Achadinhos Brasil" />
+        </div>
+
+        <p class="brand-label">Rei dos Achadinhos Brasil</p>
+
+        <h1 class="headline">
+          Ofertas do<br>
+          <em>Mercado Livre</em><br>
+          no WhatsApp
+        </h1>
       </div>
 
-      <div class="logo">
-        <!-- Substitua pelo caminho real da sua imagem -->
-        <img src="coroa-rei.png" alt="Logo Rei dos Achadinhos Brasil" onerror="this.src='https://placehold.co/90x90/FFE600/00A650?text=Rei'"/>
-      </div>
+      <div class="card-body">
 
-      <p class="brand">Rei dos Achadinhos Brasil</p>
-
-      <h1>
-        As Melhores Ofertas do Mercado Livre no seu WhatsApp
-      </h1>
-
-      <p class="sub">
-        Receba cupons de desconto, bugs e promoções relâmpago antes de todo mundo. 100% Grátis.
-      </p>
-
-      <div class="social-proof">
-        <div class="stars">★★★★★</div>
-        <div class="proof-text">+10.450 membros economizando</div>
-      </div>
-    </section>
-
-    <!-- Call to Action Principal -->
-    <div class="cta-container">
-      <a id="btn-whatsapp" class="cta" href="https://chat.whatsapp.com/LSihkdecPKW2g0qkbdzDbC" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.125.553 4.195 1.604 6.012L.416 23.584l5.672-1.488c1.76.947 3.738 1.447 5.943 1.447 6.646 0 12.031-5.385 12.031-12.031S18.677 0 12.031 0zm3.535 17.385c-.563.854-1.63 1.156-2.313 1.25-.688.094-1.635.156-3.844-1.042-2.208-1.198-3.625-3.448-3.73-3.594-.104-.146-.885-1.177-.885-2.25 0-1.073.552-1.604.75-1.833.198-.229.427-.292.573-.292.146 0 .292 0 .417.01.125.01.292-.042.458.354.167.396.573 1.406.625 1.51.052.104.083.229.01.375-.073.146-.115.24-.229.365-.115.125-.24.26-.344.365-.115.115-.24.24-.104.469.135.229.604.99 1.292 1.604.885.792 1.635 1.042 1.865 1.146.229.104.365.083.5-.063.135-.146.583-.677.74-9.906.156-.229.313-.188.521-.104.208.083 1.323.625 1.552.74.229.115.385.177.438.281.052.104.052.604-.511 1.458z"/>
-        </svg>
-        <span>Entrar no Grupo Vip</span>
-      </a>
-      <p class="note">Toque no botão para abrir o convite no seu WhatsApp.</p>
-    </div>
-
-    <!-- Benefícios -->
-    <section class="section">
-      <h2 class="section-title">Por que participar?</h2>
-      <div class="benefits-grid">
-        <div class="benefit-card">
-          <div class="benefit-icon">🎟️</div>
-          <div class="benefit-text">
-            <h3>Cupons Exclusivos</h3>
-            <p>Tenha acesso a cupons de desconto limitados antes que eles esgotem no site.</p>
+        <div class="perks" aria-label="Benefícios do grupo">
+          <div class="perk">
+            <span class="perk-icon">🎯</span>
+            <div class="perk-text">
+              Achadinhos selecionados
+              <small>Só produto com desconto real</small>
+            </div>
+          </div>
+          <div class="perk">
+            <span class="perk-icon">🏷️</span>
+            <div class="perk-text">
+              Cupons exclusivos
+              <small>Código de desconto direto no grupo</small>
+            </div>
+          </div>
+          <div class="perk">
+            <span class="perk-icon">⚡</span>
+            <div class="perk-text">
+              Alertas relâmpago
+              <small>Ofertas por tempo limitado em primeira mão</small>
+            </div>
           </div>
         </div>
-        <div class="benefit-card">
-          <div class="benefit-icon">⚡</div>
-          <div class="benefit-text">
-            <h3>Ofertas Relâmpago</h3>
-            <p>Monitoramos quedas bruscas de preços e avisamos você imediatamente.</p>
+
+        <div class="affiliate-badge">
+          <span class="affiliate-icon">🛒</span>
+          <div class="affiliate-text">
+            Afiliado Mercado Livre
+            <span>— links verificados, sem golpe</span>
           </div>
         </div>
-        <div class="benefit-card">
-          <div class="benefit-icon">🛡️</div>
-          <div class="benefit-text">
-            <h3>Curadoria Segura</h3>
-            <p>Apenas links oficiais do Mercado Livre. Compre com total segurança e garantia.</p>
-          </div>
+
+        <a
+          id="btn-whatsapp"
+          class="cta"
+          href="https://chat.whatsapp.com/LSihkdecPKW2g0qkbdzDbC"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Quero entrar no grupo do WhatsApp"
+        >
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M16.1 4.8A11.1 11.1 0 0 0 6.6 21.7L5.4 26.6l5-1.3a11.1 11.1 0 1 0 5.7-20.5Z" fill="none" stroke="#111" stroke-width="2.8" stroke-linejoin="round"/>
+            <path d="M12 10.6c-.22-.5-.46-.52-.67-.53h-.58c-.2 0-.52.08-.8.38-.27.3-1.05 1.02-1.05 2.48s1.08 2.87 1.23 3.06c.15.2 2.07 3.28 5.12 4.49 2.54 1 3.05.8 3.6.74.55-.05 1.79-.73 2.04-1.45.25-.71.25-1.32.17-1.45-.07-.12-.27-.2-.57-.35-.3-.15-1.79-.88-2.07-.98-.28-.1-.48-.15-.68.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.08-.3-.15-1.27-.47-2.4-1.49-.9-.8-1.5-1.78-1.67-2.08-.17-.3-.02-.47.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.65-1.6-.88-2.18Z" fill="#111"/>
+          </svg>
+          <span class="cta-label">Quero entrar no grupo</span>
+        </a>
+
+        <p class="hint">Grátis · Toque e abra no WhatsApp</p>
+      </div>
+
+      <div class="card-footer">
+        <div class="footer-item">
+          <svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>
+          100% gratuito
+        </div>
+        <span class="sep">·</span>
+        <div class="footer-item">
+          <svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>
+          Sem spam
+        </div>
+        <span class="sep">·</span>
+        <div class="footer-item">
+          <svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>
+          Sair quando quiser
         </div>
       </div>
-    </section>
 
-    <!-- Dúvidas Frequentes (FAQ) -->
-    <section class="section" style="background-color: var(--white);">
-      <h2 class="section-title">Dúvidas Frequentes</h2>
-      <div class="faq-item">
-        <div class="faq-q">O grupo é realmente gratuito?</div>
-        <div class="faq-a">Sim! Você não paga absolutamente nada para entrar ou permanecer no grupo.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Vou receber muitas mensagens de bom dia?</div>
-        <div class="faq-a">Não. O grupo é fechado (apenas os administradores mandam mensagens) e focado 100% em enviar as melhores ofertas.</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">Como vocês ganham dinheiro?</div>
-        <div class="faq-a">Recebemos uma pequena comissão do Mercado Livre pelas vendas geradas através dos nossos links, sem nenhum custo extra para você.</div>
-      </div>
-    </section>
-
-    <!-- Rodapé -->
-    <footer class="footer">
-      <p class="footer-disclaimer">
-        <strong>Aviso Legal:</strong> Este é um site independente de curadoria e afiliação. Não possuímos vínculo empregatício ou institucional com o Mercado Livre. Os preços e a disponibilidade dos produtos estão sujeitos a alterações sem aviso prévio. Ao clicar nos links e realizar uma compra, podemos receber comissões.
-      </p>
-      <div class="footer-links">
-        <a href="#">Termos de Uso</a>
-        <span>•</span>
-        <a href="#">Política de Privacidade</a>
-      </div>
-    </footer>
-
+    </article>
   </main>
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const btnWhatsApp = document.getElementById("btn-whatsapp");
-
-      if (btnWhatsApp) {
-        btnWhatsApp.addEventListener("click", function () {
+      const btn = document.getElementById("btn-whatsapp");
+      if (btn) {
+        btn.addEventListener("click", function () {
           if (typeof gtag === "function") {
             gtag("event", "clique_whatsapp", {
               event_category: "engajamento",
               event_label: "botao_quero_entrar_no_grupo",
-              link_url: btnWhatsApp.href,
+              link_url: btn.href,
               page_title: document.title,
               transport_type: "beacon"
             });
