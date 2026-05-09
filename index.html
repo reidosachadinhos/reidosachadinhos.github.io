@@ -4,15 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="theme-color" content="#FFE600" />
-  <meta
-    name="description"
-    content="Entre no grupo Rei dos Achadinhos Brasil e receba ofertas do Mercado Livre direto no WhatsApp."
-  />
+  <meta name="description" content="Entre no grupo Rei dos Achadinhos Brasil e receba ofertas do Mercado Livre direto no WhatsApp." />
   <title>Rei dos Achadinhos Brasil</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,700;10..48,800&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,700;10..48,800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TTKGBS9V7H"></script>
@@ -24,498 +21,252 @@
   </script>
 
   <style>
-    :root{
-      --yellow:#FFE600;
-      --yellow-deep:#FFD600;
-      --gold:#F5B700;
-      --gold-light:#FFE17A;
-      --gold-dark:#A97800;
-      --green:#00A650;
-      --green-dark:#007A3A;
-      --black:#0C0C0C;
-      --text:#202020;
-      --muted:#666666;
-      --paper:#FFFCEF;
-      --white:#FFFFFF;
-      --line:rgba(12,12,12,.09);
-      --shadow:0 34px 100px rgba(0,0,0,.20);
-      --radius:34px;
+    :root {
+      --yellow: #FFE600;
+      --yellow-deep: #FFD600;
+      --gold-light: #FFE17A;
+      --gold: #FFC93A;
+      --gold-dark: #D49A00;
+      --green: #00A650;
+      --green-dark: #007A3A;
+      --black: #111111;
+      --text: #333333;
+      --white: #FFFFFF;
+      --bg: #F8F9FA;
     }
 
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background-color: var(--yellow);
+      background-image: radial-gradient(circle at 15% 50%, rgba(255,255,255,0.2) 0%, transparent 50%), 
+                        radial-gradient(circle at 85% 30%, rgba(255,255,255,0.3) 0%, transparent 40%);
+      color: var(--text);
+      font-family: "Sora", sans-serif;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
     }
 
-    html{
-      -webkit-text-size-adjust:100%;
+    .card {
+      background: var(--white);
+      width: 100%;
+      max-width: 400px;
+      border-radius: 32px;
+      padding: 32px 24px 24px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      position: relative;
+      animation: slideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
 
-    body{
-      min-height:100vh;
-      color:var(--black);
-      font-family:"Sora", Arial, sans-serif;
-      background:
-        radial-gradient(circle at 18% 10%, rgba(255,255,255,.74), transparent 23%),
-        radial-gradient(circle at 86% 22%, rgba(255,255,255,.34), transparent 26%),
-        linear-gradient(145deg, var(--yellow) 0%, var(--yellow-deep) 54%, #FFF4A6 100%);
-      overflow-x:hidden;
+    /* Top Badge */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--black);
+      color: var(--white);
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 6px 14px;
+      border-radius: 999px;
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
 
-    .page{
-      min-height:100vh;
-      display:grid;
-      place-items:center;
-      padding:18px;
-      position:relative;
-      isolation:isolate;
+    .badge span {
+      width: 8px;
+      height: 8px;
+      background: var(--green);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
     }
 
-    .orb{
-      position:absolute;
-      border-radius:50%;
-      pointer-events:none;
-      opacity:.34;
-      z-index:-1;
-      animation:float 7s ease-in-out infinite;
+    /* Logo */
+    .logo {
+      width: 80px;
+      height: 80px;
+      margin: 16px auto 16px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 12px 24px rgba(0, 166, 80, 0.2);
     }
 
-    .orb-one{
-      width:210px;
-      height:210px;
-      left:max(16px, calc(50% - 430px));
-      top:10%;
-      background:rgba(255,255,255,.35);
+    .logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
-    .orb-two{
-      width:150px;
-      height:150px;
-      right:max(14px, calc(50% - 430px));
-      bottom:14%;
-      background:rgba(0,166,80,.12);
-      animation-delay:-2.4s;
+    /* Typography */
+    .brand {
+      color: var(--green-dark);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
     }
 
-    .card{
-      width:min(100%, 424px);
-      position:relative;
-      overflow:hidden;
-      border-radius:var(--radius);
-      padding:24px 21px 18px;
-      text-align:center;
-      background:
-        linear-gradient(180deg, rgba(255,255,255,.64), rgba(255,255,255,.22)),
-        rgba(255,252,239,.96);
-      border:1px solid rgba(255,255,255,.86);
-      box-shadow:var(--shadow);
-      isolation:isolate;
-      animation:cardIn .55s cubic-bezier(.2,.8,.2,1) both;
+    h1 {
+      font-family: "Bricolage Grotesque", sans-serif;
+      font-size: 38px;
+      line-height: 1;
+      font-weight: 800;
+      color: var(--black);
+      letter-spacing: -1.5px;
+      margin-bottom: 12px;
     }
 
-    .card::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      padding:1px;
-      border-radius:inherit;
-      background:linear-gradient(135deg, rgba(255,255,255,.92), rgba(0,166,80,.56), rgba(245,183,0,.78));
-      -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-      -webkit-mask-composite:xor;
-      mask-composite:exclude;
-      z-index:-1;
+    h1 .green { color: var(--green); }
+
+    .sub {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 24px;
+      line-height: 1.4;
+      padding: 0 10px;
     }
 
-    .card::after{
-      content:"";
-      position:absolute;
-      width:170px;
-      height:170px;
-      right:-86px;
-      top:74px;
-      border-radius:50%;
-      background:rgba(0,166,80,.085);
-      z-index:-1;
+    /* Feature Chips */
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 28px;
     }
 
-    .top-line{
-      position:absolute;
-      inset:0 0 auto 0;
-      height:7px;
-      background:linear-gradient(90deg, var(--green), var(--yellow), var(--gold), var(--green));
-      z-index:2;
+    .chip {
+      background: var(--white);
+      border: 1px solid #E5E5E5;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
     }
 
-    .sparkle{
-      position:absolute;
-      width:8px;
-      height:8px;
-      border-radius:50%;
-      background:var(--gold);
-      box-shadow:0 0 0 6px rgba(245,183,0,.13);
-      opacity:.64;
-      animation:pulse 2.8s ease-in-out infinite;
+    /* CTA Button */
+    .cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      width: 100%;
+      padding: 20px;
+      background: linear-gradient(180deg, var(--gold-light) 0%, var(--gold) 100%);
+      color: var(--black);
+      text-decoration: none;
+      border-radius: 20px;
+      font-family: "Bricolage Grotesque", sans-serif;
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      box-shadow: 0 8px 0 var(--gold-dark), 0 16px 24px rgba(0, 0, 0, 0.15);
+      transition: transform 0.1s, box-shadow 0.1s;
+      -webkit-tap-highlight-color: transparent;
     }
 
-    .sparkle-one{
-      left:38px;
-      top:118px;
+    .cta:active {
+      transform: translateY(6px);
+      box-shadow: 0 2px 0 var(--gold-dark), 0 8px 12px rgba(0, 0, 0, 0.1);
     }
 
-    .sparkle-two{
-      right:40px;
-      top:332px;
-      width:6px;
-      height:6px;
-      animation-delay:-1.1s;
+    .cta svg { width: 26px; height: 26px; fill: var(--black); }
+
+    /* Footer Notes */
+    .note {
+      font-size: 12px;
+      font-weight: 600;
+      color: #888;
+      margin-top: 20px;
     }
 
-    .tag{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:8px;
-      padding:8px 12px;
-      border-radius:999px;
-      background:var(--black);
-      color:var(--white);
-      font-size:10.5px;
-      font-weight:800;
-      letter-spacing:.08em;
-      text-transform:uppercase;
-      box-shadow:0 12px 24px rgba(0,0,0,.16);
+    .disclaimer {
+      font-size: 10px;
+      color: #A0A0A0;
+      margin-top: 24px;
+      padding-top: 16px;
+      border-top: 1px solid #F0F0F0;
+      line-height: 1.4;
     }
 
-    .tag span{
-      width:8px;
-      height:8px;
-      border-radius:99px;
-      background:var(--green);
-      box-shadow:0 0 0 4px rgba(0,166,80,.20);
+    .disclaimer strong { color: #666; font-weight: 700; }
+
+    /* Animations */
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
-    .logo{
-      width:86px;
-      height:86px;
-      margin:20px auto 15px;
-      border-radius:28px;
-      overflow:hidden;
-      background:var(--white);
-      border:2px solid rgba(12,12,12,.10);
-      box-shadow:0 18px 35px rgba(0,0,0,.12);
-      position:relative;
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(0, 166, 80, 0.4); }
+      70% { box-shadow: 0 0 0 4px rgba(0, 166, 80, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(0, 166, 80, 0); }
     }
 
-    .logo::after{
-      content:"";
-      position:absolute;
-      inset:-42%;
-      background:linear-gradient(120deg, transparent 36%, rgba(255,255,255,.65) 50%, transparent 64%);
-      transform:translateX(-80%) rotate(18deg);
-      animation:shine 4.8s ease-in-out infinite;
-    }
-
-    .logo img{
-      width:100%;
-      height:100%;
-      object-fit:contain;
-      display:block;
-      border-radius:26px;
-    }
-
-    .brand{
-      margin-bottom:9px;
-      color:var(--green-dark);
-      font-size:11px;
-      font-weight:800;
-      letter-spacing:.14em;
-      text-transform:uppercase;
-    }
-
-    h1{
-      max-width:345px;
-      margin:0 auto;
-      font-family:"Bricolage Grotesque", "Sora", Arial, sans-serif;
-      font-size:clamp(39px, 9.8vw, 53px);
-      line-height:.86;
-      letter-spacing:-2.4px;
-      font-weight:800;
-      text-wrap:balance;
-    }
-
-    h1 .green{
-      color:var(--green-dark);
-    }
-
-    .sub{
-      max-width:292px;
-      margin:15px auto 0;
-      color:var(--text);
-      font-size:14.5px;
-      line-height:1.38;
-      font-weight:500;
-      text-wrap:balance;
-    }
-
-    .chips{
-      display:flex;
-      justify-content:center;
-      gap:8px;
-      flex-wrap:wrap;
-      margin:18px 0 18px;
-    }
-
-    .chip{
-      padding:8px 11px;
-      border-radius:999px;
-      background:rgba(255,255,255,.80);
-      border:1px solid var(--line);
-      color:var(--text);
-      font-size:12px;
-      line-height:1;
-      font-weight:700;
-      box-shadow:0 8px 22px rgba(0,0,0,.045);
-    }
-
-    .cta{
-      width:100%;
-      min-height:64px;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      gap:10px;
-      border-radius:22px;
-      background:linear-gradient(180deg, var(--gold-light) 0%, #FFC93A 46%, #E0A800 100%);
-      color:var(--black);
-      text-decoration:none;
-      font-family:"Bricolage Grotesque", "Sora", Arial, sans-serif;
-      font-size:clamp(23px, 6.2vw, 30px);
-      line-height:1;
-      letter-spacing:-1px;
-      font-weight:800;
-      box-shadow:0 10px 0 var(--gold-dark), 0 22px 36px rgba(0,0,0,.18);
-      transition:transform .14s ease, box-shadow .14s ease, filter .14s ease;
-      -webkit-tap-highlight-color:transparent;
-      position:relative;
-      overflow:hidden;
-    }
-
-    .cta::before{
-      content:"";
-      position:absolute;
-      inset:-45% auto -45% -38%;
-      width:38%;
-      background:linear-gradient(90deg, transparent, rgba(255,255,255,.62), transparent);
-      transform:skewX(-18deg);
-      animation:buttonShine 3.8s ease-in-out infinite;
-      pointer-events:none;
-    }
-
-    .cta:hover{
-      transform:translateY(-1px);
-      filter:brightness(1.03);
-    }
-
-    .cta:active{
-      transform:translateY(5px);
-      box-shadow:0 5px 0 var(--gold-dark), 0 12px 22px rgba(0,0,0,.15);
-    }
-
-    .cta svg{
-      width:24px;
-      height:24px;
-      flex:0 0 auto;
-      position:relative;
-      z-index:1;
-    }
-
-    .cta-text{
-      position:relative;
-      z-index:1;
-    }
-
-    .note{
-      margin-top:12px;
-      color:var(--muted);
-      font-size:12.5px;
-      font-weight:600;
-    }
-
-    .foot{
-      max-width:320px;
-      margin:14px auto 0;
-      padding-top:12px;
-      border-top:1px solid var(--line);
-      color:#767676;
-      font-size:10px;
-      line-height:1.42;
-      font-weight:500;
-    }
-
-    .foot strong{
-      color:#424242;
-      font-weight:800;
-    }
-
-    @keyframes cardIn{
-      from{
-        opacity:0;
-        transform:translateY(14px) scale(.985);
-      }
-      to{
-        opacity:1;
-        transform:translateY(0) scale(1);
-      }
-    }
-
-    @keyframes float{
-      0%,100%{
-        transform:translate3d(0,0,0);
-      }
-      50%{
-        transform:translate3d(0,-14px,0);
-      }
-    }
-
-    @keyframes shine{
-      0%,62%{
-        transform:translateX(-80%) rotate(18deg);
-      }
-      78%,100%{
-        transform:translateX(82%) rotate(18deg);
-      }
-    }
-
-    @keyframes buttonShine{
-      0%,58%{
-        left:-42%;
-      }
-      82%,100%{
-        left:112%;
-      }
-    }
-
-    @keyframes pulse{
-      0%,100%{
-        transform:scale(1);
-        opacity:.66;
-      }
-      50%{
-        transform:scale(1.32);
-        opacity:.35;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce){
-      *, *::before, *::after{
-        animation:none !important;
-        transition:none !important;
-      }
-    }
-
-    @media (max-width:380px){
-      .page{
-        padding:10px;
-      }
-
-      .card{
-        border-radius:28px;
-        padding:21px 15px 16px;
-      }
-
-      .tag{
-        font-size:9.8px;
-      }
-
-      .logo{
-        width:76px;
-        height:76px;
-        border-radius:24px;
-      }
-
-      .brand{
-        font-size:10px;
-      }
-
-      h1{
-        letter-spacing:-1.8px;
-      }
-
-      .sub{
-        font-size:13.5px;
-      }
-
-      .cta{
-        min-height:60px;
-      }
-
-      .sparkle{
-        display:none;
-      }
+    /* Small Phones */
+    @media (max-width: 360px) {
+      h1 { font-size: 32px; }
+      .cta { font-size: 20px; padding: 16px; }
     }
   </style>
 </head>
 <body>
-  <main class="page">
-    <span class="orb orb-one" aria-hidden="true"></span>
-    <span class="orb orb-two" aria-hidden="true"></span>
 
-    <section class="card" aria-label="Convite para entrar no grupo do WhatsApp">
-      <span class="top-line" aria-hidden="true"></span>
-      <span class="sparkle sparkle-one" aria-hidden="true"></span>
-      <span class="sparkle sparkle-two" aria-hidden="true"></span>
+  <main class="card">
+    
+    <div class="badge">
+      <span></span> GRUPO GRATUITO
+    </div>
 
-      <div class="tag">
-        <span aria-hidden="true"></span>
-        Grupo gratuito
-      </div>
+    <!-- Mantenha a imagem original da coroa -->
+    <div class="logo">
+      <img src="coroa-rei.png" alt="Rei dos Achadinhos" />
+    </div>
 
-      <div class="logo">
-        <img src="coroa-rei.png" alt="Logo Rei dos Achadinhos Brasil" />
-      </div>
+    <p class="brand">Rei dos Achadinhos Brasil</p>
 
-      <p class="brand">Rei dos Achadinhos Brasil</p>
+    <h1>Ofertas do <span class="green">Mercado Livre</span> no WhatsApp</h1>
 
-      <h1>
-        Ofertas do <span class="green">Mercado Livre</span> no WhatsApp
-      </h1>
+    <p class="sub">Achadinhos, promoções e cupons selecionados em um só lugar.</p>
 
-      <p class="sub">
-        Achadinhos, promoções e cupons selecionados em um só lugar.
-      </p>
+    <div class="chips">
+      <div class="chip">Grátis</div>
+      <div class="chip">Direto no WhatsApp</div>
+      <div class="chip">Sem enrolação</div>
+    </div>
 
-      <div class="chips" aria-label="Destaques do grupo">
-        <div class="chip">Grátis</div>
-        <div class="chip">Direto no WhatsApp</div>
-        <div class="chip">Sem enrolação</div>
-      </div>
+    <a id="btn-whatsapp" class="cta" href="https://chat.whatsapp.com/LSihkdecPKW2g0qkbdzDbC" target="_blank" rel="noopener noreferrer">
+      <!-- Ícone Oficial do WhatsApp -->
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.125.553 4.195 1.604 6.012L.416 23.584l5.672-1.488c1.76.947 3.738 1.447 5.943 1.447 6.646 0 12.031-5.385 12.031-12.031S18.677 0 12.031 0zm3.535 17.385c-.563.854-1.63 1.156-2.313 1.25-.688.094-1.635.156-3.844-1.042-2.208-1.198-3.625-3.448-3.73-3.594-.104-.146-.885-1.177-.885-2.25 0-1.073.552-1.604.75-1.833.198-.229.427-.292.573-.292.146 0 .292 0 .417.01.125.01.292-.042.458.354.167.396.573 1.406.625 1.51.052.104.083.229.01.375-.073.146-.115.24-.229.365-.115.125-.24.26-.344.365-.115.115-.24.24-.104.469.135.229.604.99 1.292 1.604.885.792 1.635 1.042 1.865 1.146.229.104.365.083.5-.063.135-.146.583-.677.74-9.906.156-.229.313-.188.521-.104.208.083 1.323.625 1.552.74.229.115.385.177.438.281.052.104.052.604-.511 1.458z"/>
+      </svg>
+      <span>Quero entrar no grupo</span>
+    </a>
 
-      <a
-        id="btn-whatsapp"
-        class="cta"
-        href="https://chat.whatsapp.com/LSihkdecPKW2g0qkbdzDbC"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Quero entrar no grupo"
-      >
-        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M16.1 4.8A11.1 11.1 0 0 0 6.6 21.7L5.4 26.6l5-1.3a11.1 11.1 0 1 0 5.7-20.5Z" fill="none" stroke="#111111" stroke-width="3" stroke-linejoin="round"/>
-          <path d="M12 10.6c-.22-.5-.46-.52-.67-.53h-.58c-.2 0-.52.08-.8.38-.27.3-1.05 1.02-1.05 2.48s1.08 2.87 1.23 3.06c.15.2 2.07 3.28 5.12 4.49 2.54 1 3.05.8 3.6.74.55-.05 1.79-.73 2.04-1.45.25-.71.25-1.32.17-1.45-.07-.12-.27-.2-.57-.35-.3-.15-1.79-.88-2.07-.98-.28-.1-.48-.15-.68.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.08-.3-.15-1.27-.47-2.4-1.49-.9-.8-1.5-1.78-1.67-2.08-.17-.3-.02-.47.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.65-1.6-.88-2.18Z" fill="#111111"/>
-        </svg>
-        <span class="cta-text">Quero entrar no grupo</span>
-      </a>
+    <p class="note">Toque e abra o convite no WhatsApp.</p>
 
-      <p class="note">Toque e abra o convite no WhatsApp.</p>
+    <p class="disclaimer">
+      <strong>Página independente de afiliado.</strong> Preços e disponibilidade podem mudar.
+    </p>
 
-      <p class="foot">
-        <strong>Página independente de afiliado.</strong>
-        Preços e disponibilidade podem mudar.
-      </p>
-    </section>
   </main>
 
   <script>
+    // Script de Rastreamento
     document.addEventListener("DOMContentLoaded", function () {
       const btnWhatsApp = document.getElementById("btn-whatsapp");
 
@@ -534,5 +285,6 @@
       }
     });
   </script>
+
 </body>
 </html>
