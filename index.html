@@ -21,33 +21,39 @@
 
   <style>
     :root {
-      --yellow:     #FFE600;
-      --yellow-deep:#FFD600;
-      --gold:       #F5B700;
-      --gold-light: #FFE17A;
-      --gold-dark:  #A97800;
-      --green:      #00A650;
-      --green-dark: #007A3A;
-      --black:      #0C0C0C;
-      --text:       #202020;
-      --muted:      #666666;
-      --paper:      #FFFCEF;
-      --white:      #FFFFFF;
-      --line:       rgba(12,12,12,.09);
-      --radius:     34px;
+      --yellow:      #FFE600;
+      --yellow-deep: #FFD600;
+      --gold:        #F5B700;
+      --green:       #00A650;
+      --green-dark:  #007A3A;
+      --black:       #0C0C0C;
+      --text:        #202020;
+      --muted:       #666666;
+      --paper:       #FFFCEF;
+      --white:       #FFFFFF;
+      --line:        rgba(12,12,12,.09);
+      --radius:      34px;
     }
 
-    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-    html { -webkit-text-size-adjust:100%; }
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      -webkit-text-size-adjust: 100%;
+    }
 
     body {
       min-height: 100vh;
+      min-height: 100dvh;
       color: var(--black);
       font-family: "Sora", Arial, sans-serif;
       background:
-        radial-gradient(ellipse 70% 55% at 18% 8%,  rgba(255,255,255,.80) 0%, transparent 55%),
-        radial-gradient(ellipse 50% 40% at 88% 20%,  rgba(255,255,255,.38) 0%, transparent 50%),
-        radial-gradient(ellipse 60% 50% at 50% 110%, rgba(245,183,0,.28)   0%, transparent 60%),
+        radial-gradient(ellipse 70% 55% at 18% 8%, rgba(255,255,255,.80) 0%, transparent 55%),
+        radial-gradient(ellipse 50% 40% at 88% 20%, rgba(255,255,255,.38) 0%, transparent 50%),
+        radial-gradient(ellipse 60% 50% at 50% 110%, rgba(245,183,0,.28) 0%, transparent 60%),
         linear-gradient(148deg, var(--yellow) 0%, var(--yellow-deep) 52%, #FFF5B0 100%);
       overflow-x: hidden;
     }
@@ -64,6 +70,7 @@
 
     .page {
       min-height: 100vh;
+      min-height: 100dvh;
       display: grid;
       place-items: center;
       padding: 18px;
@@ -78,16 +85,20 @@
       z-index: -1;
       animation: float 7s ease-in-out infinite;
     }
+
     .orb-one {
-      width: 240px; height: 240px;
+      width: 240px;
+      height: 240px;
       left: max(16px, calc(50% - 440px));
       top: 8%;
       background: radial-gradient(circle at 40% 40%, rgba(255,255,255,.60), rgba(255,255,255,.10));
       filter: blur(2px);
       opacity: .55;
     }
+
     .orb-two {
-      width: 160px; height: 160px;
+      width: 160px;
+      height: 160px;
       right: max(12px, calc(50% - 440px));
       bottom: 12%;
       background: radial-gradient(circle, rgba(0,166,80,.18), transparent 70%);
@@ -95,8 +106,10 @@
       opacity: .60;
       animation-delay: -2.4s;
     }
+
     .orb-three {
-      width: 100px; height: 100px;
+      width: 100px;
+      height: 100px;
       right: max(70px, calc(50% - 360px));
       top: 20%;
       background: radial-gradient(circle, rgba(245,183,0,.22), transparent 70%);
@@ -105,7 +118,6 @@
       animation-delay: -4.8s;
     }
 
-    /* ── CARD ── */
     .card {
       width: min(100%, 424px);
       position: relative;
@@ -118,8 +130,8 @@
         rgba(255,252,239,.97);
       border: 1px solid rgba(255,255,255,.90);
       box-shadow:
-        0 1px 0   rgba(255,255,255,.90) inset,
-        0 -1px 0  rgba(0,0,0,.04) inset,
+        0 1px 0 rgba(255,255,255,.90) inset,
+        0 -1px 0 rgba(0,0,0,.04) inset,
         0 4px 16px rgba(0,0,0,.06),
         0 20px 60px rgba(0,0,0,.14),
         0 48px 120px rgba(0,0,0,.18);
@@ -148,8 +160,10 @@
     .card::after {
       content: "";
       position: absolute;
-      width: 200px; height: 200px;
-      right: -100px; top: 60px;
+      width: 200px;
+      height: 200px;
+      right: -100px;
+      top: 60px;
       border-radius: 50%;
       background: radial-gradient(circle, rgba(0,166,80,.09), transparent 70%);
       z-index: -1;
@@ -179,10 +193,22 @@
       opacity: .70;
       animation: pulse 3s ease-in-out infinite;
     }
-    .sparkle-one { width:9px; height:9px; left:36px; top:120px; }
-    .sparkle-two { width:6px; height:6px; right:38px; top:310px; animation-delay:-1.3s; }
 
-    /* ── TAG ── */
+    .sparkle-one {
+      width: 9px;
+      height: 9px;
+      left: 36px;
+      top: 120px;
+    }
+
+    .sparkle-two {
+      width: 6px;
+      height: 6px;
+      right: 38px;
+      top: 310px;
+      animation-delay: -1.3s;
+    }
+
     .tag {
       display: inline-flex;
       align-items: center;
@@ -198,17 +224,19 @@
       box-shadow: 0 8px 28px rgba(0,0,0,.22), 0 2px 0 rgba(255,255,255,.08) inset;
       animation: cardIn .6s .08s cubic-bezier(.16,.86,.32,1) both;
     }
+
     .tag .dot {
-      width: 8px; height: 8px;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
       background: var(--green);
       box-shadow: 0 0 0 3px rgba(0,166,80,.25);
       animation: blink 2s ease-in-out infinite;
     }
 
-    /* ── LOGO ── */
     .logo {
-      width: 80px; height: 80px;
+      width: 80px;
+      height: 80px;
       margin: 18px auto 14px;
       border-radius: 26px;
       overflow: hidden;
@@ -220,6 +248,7 @@
       position: relative;
       animation: logoIn .7s .14s cubic-bezier(.16,.86,.32,1) both;
     }
+
     .logo::after {
       content: "";
       position: absolute;
@@ -228,14 +257,15 @@
       transform: translateX(-90%) rotate(20deg);
       animation: logoShine 5s ease-in-out infinite;
     }
+
     .logo img {
-      width: 100%; height: 100%;
+      width: 100%;
+      height: 100%;
       object-fit: contain;
       display: block;
       border-radius: 24px;
     }
 
-    /* ── BRAND ── */
     .brand {
       margin-bottom: 8px;
       color: var(--green-dark);
@@ -246,7 +276,6 @@
       animation: fadeUp .5s .2s ease both;
     }
 
-    /* ── HEADLINE ── */
     h1 {
       max-width: 320px;
       margin: 0 auto;
@@ -258,9 +287,11 @@
       text-wrap: balance;
       animation: fadeUp .55s .26s ease both;
     }
-    h1 .green { color: var(--green-dark); }
 
-    /* ── SUB ── */
+    h1 .green {
+      color: var(--green-dark);
+    }
+
     .sub {
       max-width: 272px;
       margin: 12px auto 0;
@@ -272,7 +303,6 @@
       animation: fadeUp .55s .32s ease both;
     }
 
-    /* ── CHIPS ── */
     .chips {
       display: flex;
       justify-content: center;
@@ -281,6 +311,7 @@
       margin: 16px 0 18px;
       animation: fadeUp .55s .38s ease both;
     }
+
     .chip {
       padding: 7px 11px;
       border-radius: 999px;
@@ -291,14 +322,8 @@
       line-height: 1;
       font-weight: 700;
       box-shadow: 0 2px 8px rgba(0,0,0,.06), 0 1px 0 rgba(255,255,255,.9) inset;
-      transition: transform .15s ease, box-shadow .15s ease;
-    }
-    .chip:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 18px rgba(0,0,0,.10), 0 1px 0 rgba(255,255,255,.9) inset;
     }
 
-    /* ── CTA BUTTON ── */
     .cta {
       width: 100%;
       min-height: 60px;
@@ -314,7 +339,6 @@
       color: var(--black);
       text-decoration: none;
       font-family: "Bricolage Grotesque", "Sora", Arial, sans-serif;
-      /* Fixed font size so text never overflows on any phone */
       font-size: 20px;
       line-height: 1;
       letter-spacing: -.4px;
@@ -329,6 +353,7 @@
       overflow: hidden;
       animation: fadeUp .6s .44s ease both;
     }
+
     .cta::before {
       content: "";
       position: absolute;
@@ -339,14 +364,18 @@
       animation: btnShine 3.8s ease-in-out infinite;
       pointer-events: none;
     }
+
     .cta::after {
       content: "";
       position: absolute;
-      top: 0; left: 12px; right: 12px;
+      top: 0;
+      left: 12px;
+      right: 12px;
       height: 1px;
       background: rgba(255,255,255,.55);
       border-radius: 999px;
     }
+
     .cta:hover {
       transform: translateY(-2px);
       box-shadow:
@@ -354,6 +383,7 @@
         0 12px 0 rgba(0,0,0,.12),
         0 28px 52px rgba(0,0,0,.22);
     }
+
     .cta:active {
       transform: translateY(6px);
       box-shadow:
@@ -362,10 +392,19 @@
         0 8px 16px rgba(0,0,0,.14);
     }
 
-    .cta svg { width:22px; height:22px; flex:0 0 auto; position:relative; z-index:1; }
-    .cta-text { position:relative; z-index:1; }
+    .cta svg {
+      width: 22px;
+      height: 22px;
+      flex: 0 0 auto;
+      position: relative;
+      z-index: 1;
+    }
 
-    /* ── NOTE ── */
+    .cta-text {
+      position: relative;
+      z-index: 1;
+    }
+
     .note {
       margin-top: 11px;
       color: var(--muted);
@@ -374,7 +413,6 @@
       animation: fadeUp .5s .50s ease both;
     }
 
-    /* ── FOOTER ── */
     .foot {
       max-width: 300px;
       margin: 13px auto 0;
@@ -386,108 +424,206 @@
       font-weight: 500;
       animation: fadeUp .5s .55s ease both;
     }
-    .foot strong { color: #424242; font-weight: 800; }
 
-    /* ── KEYFRAMES ── */
+    .foot strong {
+      color: #424242;
+      font-weight: 800;
+    }
+
     @keyframes cardIn {
-      from { opacity:0; transform:translateY(18px) scale(.982); }
-      to   { opacity:1; transform:translateY(0)    scale(1); }
+      from {
+        opacity: 0;
+        transform: translateY(18px) scale(.982);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
     }
+
     @keyframes logoIn {
-      from { opacity:0; transform:translateY(10px) scale(.90); }
-      to   { opacity:1; transform:translateY(0)    scale(1); }
+      from {
+        opacity: 0;
+        transform: translateY(10px) scale(.90);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
     }
+
     @keyframes fadeUp {
-      from { opacity:0; transform:translateY(10px); }
-      to   { opacity:1; transform:translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
+
     @keyframes float {
-      0%,100% { transform:translate3d(0,0,0); }
-      50%      { transform:translate3d(0,-16px,0); }
+      0%, 100% {
+        transform: translate3d(0,0,0);
+      }
+
+      50% {
+        transform: translate3d(0,-16px,0);
+      }
     }
+
     @keyframes stripeSweep {
-      0%   { background-position:200% 0; }
-      100% { background-position:-200% 0; }
+      0% {
+        background-position: 200% 0;
+      }
+
+      100% {
+        background-position: -200% 0;
+      }
     }
+
     @keyframes logoShine {
-      0%,58%   { transform:translateX(-90%) rotate(20deg); }
-      76%,100% { transform:translateX(90%)  rotate(20deg); }
+      0%, 58% {
+        transform: translateX(-90%) rotate(20deg);
+      }
+
+      76%, 100% {
+        transform: translateX(90%) rotate(20deg);
+      }
     }
+
     @keyframes btnShine {
-      0%,55%   { left:-42%; }
-      80%,100% { left:115%; }
+      0%, 55% {
+        left: -42%;
+      }
+
+      80%, 100% {
+        left: 115%;
+      }
     }
+
     @keyframes blink {
-      0%,100% { opacity:1;   box-shadow:0 0 0 3px rgba(0,166,80,.25); }
-      50%      { opacity:.4;  box-shadow:0 0 0 5px rgba(0,166,80,.10); }
+      0%, 100% {
+        opacity: 1;
+        box-shadow: 0 0 0 3px rgba(0,166,80,.25);
+      }
+
+      50% {
+        opacity: .4;
+        box-shadow: 0 0 0 5px rgba(0,166,80,.10);
+      }
     }
+
     @keyframes pulse {
-      0%,100% { transform:scale(1);    opacity:.68; }
-      50%      { transform:scale(1.38); opacity:.30; }
+      0%, 100% {
+        transform: scale(1);
+        opacity: .68;
+      }
+
+      50% {
+        transform: scale(1.38);
+        opacity: .30;
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { animation:none !important; transition:none !important; opacity:1 !important; }
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+        opacity: 1 !important;
+      }
     }
 
-    @media (max-width:380px) {
-      .page  { padding:10px; }
-      .card  { border-radius:28px; padding:20px 14px 16px; }
-      .tag   { font-size:9.5px; }
-      .logo  { width:68px; height:68px; border-radius:22px; }
-      .brand { font-size:9.5px; }
-      h1     { font-size: 30px; letter-spacing:-1.6px; }
-      .sub   { font-size:13px; }
-      .cta   { min-height:54px; font-size:17px; }
-      .sparkle { display:none; }
-    }
-
-    .sticky-cta { display: none; }
-
-    @media (max-width: 768px) {
-      body { padding-bottom: 80px; }
-
-      .sticky-cta {
-        position: fixed;
-        left: 14px;
-        right: 14px;
-        bottom: calc(14px + env(safe-area-inset-bottom));
-        z-index: 10000;
-        min-height: 54px;
-        border-radius: 16px;
-        background: linear-gradient(180deg, #32E77A 0%, #00C853 45%, #00A650 100%);
-        color: #111111;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: "Bricolage Grotesque", "Sora", Arial, sans-serif;
-        font-size: 18px;
-        font-weight: 800;
-        letter-spacing: -.3px;
-        box-shadow:
-          0 6px 0 #006D34,
-          0 16px 34px rgba(0,0,0,.24);
-        white-space: nowrap;
+    @media (max-width: 380px) {
+      .page {
+        padding: 10px;
       }
 
-      .sticky-cta:active {
-        transform: translateY(4px);
-        box-shadow:
-          0 2px 0 #006D34,
-          0 8px 16px rgba(0,0,0,.18);
+      .card {
+        border-radius: 28px;
+        padding: 20px 14px 16px;
+      }
+
+      .tag {
+        font-size: 9.5px;
+      }
+
+      .logo {
+        width: 68px;
+        height: 68px;
+        border-radius: 22px;
+      }
+
+      .brand {
+        font-size: 9.5px;
+      }
+
+      h1 {
+        font-size: 30px;
+        letter-spacing: -1.6px;
+      }
+
+      .sub {
+        font-size: 13px;
+      }
+
+      .cta {
+        min-height: 54px;
+        font-size: 17px;
+      }
+
+      .sparkle {
+        display: none;
+      }
+    }
+
+    @media (max-height: 700px) and (max-width: 430px) {
+      .page {
+        padding: 10px;
+      }
+
+      .card {
+        padding: 20px 16px 16px;
+      }
+
+      .logo {
+        width: 68px;
+        height: 68px;
+        margin: 14px auto 10px;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      .chips {
+        margin: 14px 0 16px;
+      }
+
+      .note {
+        margin-top: 9px;
+      }
+
+      .foot {
+        margin-top: 10px;
+        padding-top: 10px;
       }
     }
   </style>
 </head>
+
 <body>
   <main class="page">
-    <span class="orb orb-one"   aria-hidden="true"></span>
-    <span class="orb orb-two"   aria-hidden="true"></span>
+    <span class="orb orb-one" aria-hidden="true"></span>
+    <span class="orb orb-two" aria-hidden="true"></span>
     <span class="orb orb-three" aria-hidden="true"></span>
 
     <section class="card" aria-label="Convite para entrar no grupo do WhatsApp">
-      <span class="top-line"            aria-hidden="true"></span>
+      <span class="top-line" aria-hidden="true"></span>
       <span class="sparkle sparkle-one" aria-hidden="true"></span>
       <span class="sparkle sparkle-two" aria-hidden="true"></span>
 
@@ -502,24 +638,20 @@
 
       <p class="brand">Rei dos Achadinhos Brasil</p>
 
-      <!-- Headline mais curto e direto -->
       <h1>
         Achadinhos bons e baratos no seu <span class="green">WhatsApp</span>
       </h1>
 
-      <!-- Sub reduzido: uma frase só -->
       <p class="sub">
         Ofertas do Mercado Livre direto no seu WhatsApp. Grátis, sem cadastro.
       </p>
 
-      <!-- Chips mais concisos -->
       <div class="chips" aria-label="Destaques do grupo">
         <div class="chip">✅ Gratuito</div>
         <div class="chip">✅ Sem cadastro</div>
         <div class="chip">✅ Saia quando quiser</div>
       </div>
 
-      <!-- Botão com texto curto para caber sem cortar -->
       <a
         id="btn-whatsapp"
         class="cta"
@@ -532,6 +664,7 @@
           <path d="M16.1 4.8A11.1 11.1 0 0 0 6.6 21.7L5.4 26.6l5-1.3a11.1 11.1 0 1 0 5.7-20.5Z" fill="none" stroke="#111111" stroke-width="3" stroke-linejoin="round"/>
           <path d="M12 10.6c-.22-.5-.46-.52-.67-.53h-.58c-.2 0-.52.08-.8.38-.27.3-1.05 1.02-1.05 2.48s1.08 2.87 1.23 3.06c.15.2 2.07 3.28 5.12 4.49 2.54 1 3.05.8 3.6.74.55-.05 1.79-.73 2.04-1.45.25-.71.25-1.32.17-1.45-.07-.12-.27-.2-.57-.35-.3-.15-1.79-.88-2.07-.98-.28-.1-.48-.15-.68.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.08-.3-.15-1.27-.47-2.4-1.49-.9-.8-1.5-1.78-1.67-2.08-.17-.3-.02-.47.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.65-1.6-.88-2.18Z" fill="#111111"/>
         </svg>
+
         <span class="cta-text">Entrar no grupo grátis</span>
       </a>
 
@@ -544,37 +677,23 @@
     </section>
   </main>
 
-  <a
-    id="btn-whatsapp-sticky"
-    class="sticky-cta"
-    href="https://chat.whatsapp.com/LSihkdecPKW2g0qkbdzDbC"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Entrar no grupo pelo WhatsApp"
-  >
-    Entrar no grupo grátis
-  </a>
-
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const buttons = [
-        document.getElementById("btn-whatsapp"),
-        document.getElementById("btn-whatsapp-sticky")
-      ].filter(Boolean);
+      const btn = document.getElementById("btn-whatsapp");
 
-      buttons.forEach(function (btn) {
+      if (btn) {
         btn.addEventListener("click", function () {
           if (typeof gtag === "function") {
             gtag("event", "clique_whatsapp", {
               event_category: "engajamento",
-              event_label: btn.id,
+              event_label: "cta_card_principal",
               link_url: btn.href,
               page_title: document.title,
               transport_type: "beacon"
             });
           }
         });
-      });
+      }
     });
   </script>
 </body>
