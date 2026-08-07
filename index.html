@@ -527,8 +527,11 @@
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const btn = document.getElementById("btn-whatsapp");
+  
       if (btn) {
         btn.addEventListener("click", function () {
+  
+          // Google Analytics
           if (typeof gtag === "function") {
             gtag("event", "clique_whatsapp", {
               event_category: "engajamento",
@@ -538,6 +541,14 @@
               transport_type: "beacon"
             });
           }
+  
+          // Meta Pixel
+          if (typeof fbq === "function") {
+            fbq("track", "Lead", {
+              content_name: "Clique para entrar no grupo WhatsApp"
+            });
+          }
+  
         });
       }
     });
