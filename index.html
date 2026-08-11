@@ -3,14 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="theme-color" content="#FFE600" />
-  <meta name="description" content="Entre no grupo Rei dos Achadinhos Brasil e receba ofertas do Mercado Livre direto no WhatsApp." />
-  <title>Rei dos Achadinhos Brasil</title>
+  <meta name="theme-color" content="#F7F7F4" />
+  <meta name="description" content="Entre grátis no grupo Rei dos Achadinhos Brasil e receba ofertas selecionadas do Mercado Livre direto no WhatsApp." />
+  <title>Rei dos Achadinhos Brasil | Grupo de ofertas no WhatsApp</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,700;10..48,800&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-TTKGBS9V7H"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -19,538 +16,298 @@
     gtag('config', 'G-TTKGBS9V7H');
   </script>
 
-  <!-- Meta Pixel Code -->
+  <!-- Meta Pixel -->
   <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  
-  fbq('init', '1557716409067253');
-  fbq('track', 'PageView');
+    !function(f,b,e,v,n,t,s){
+      if(f.fbq)return;
+      n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];
+      t=b.createElement(e);t.async=!0;t.src=v;
+      s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)
+    }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '1557716409067253');
+    fbq('track', 'PageView');
   </script>
-  
   <noscript>
-  <img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=1557716409067253&ev=PageView&noscript=1"
-  />
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1557716409067253&ev=PageView&noscript=1"
+      alt="" />
   </noscript>
-  <!-- End Meta Pixel Code -->
-  
+
   <style>
-    :root {
-      --yellow:     #FFE600;
-      --yellow-deep:#FFD600;
-      --gold:       #F5B700;
-      --gold-light: #FFE17A;
-      --gold-dark:  #A97800;
-      --green:      #00A650;
-      --green-dark: #007A3A;
-      --black:      #0C0C0C;
-      --text:       #202020;
-      --muted:      #666666;
-      --paper:      #FFFCEF;
-      --white:      #FFFFFF;
-      --line:       rgba(12,12,12,.09);
-      --radius:     34px;
+    :root{
+      --bg:#f6f7f4;
+      --card:#ffffff;
+      --text:#171717;
+      --muted:#676767;
+      --line:#e8e8e4;
+      --green:#128c4b;
+      --green-dark:#0d6d3b;
+      --green-soft:#edf8f1;
+      --yellow:#ffe600;
+      --shadow:0 18px 60px rgba(0,0,0,.10);
     }
 
-    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-    html { -webkit-text-size-adjust:100%; }
+    *{box-sizing:border-box;margin:0;padding:0}
 
-    body {
-      min-height: 100vh;
-      color: var(--black);
-      font-family: "Sora", Arial, sans-serif;
+    body{
+      min-height:100vh;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      color:var(--text);
       background:
-        radial-gradient(ellipse 70% 55% at 18% 8%,  rgba(255,255,255,.80) 0%, transparent 55%),
-        radial-gradient(ellipse 50% 40% at 88% 20%,  rgba(255,255,255,.38) 0%, transparent 50%),
-        radial-gradient(ellipse 60% 50% at 50% 110%, rgba(245,183,0,.28)   0%, transparent 60%),
-        linear-gradient(148deg, var(--yellow) 0%, var(--yellow-deep) 52%, #FFF5B0 100%);
-      overflow-x: hidden;
+        radial-gradient(circle at 50% -15%, rgba(255,230,0,.23), transparent 38%),
+        var(--bg);
+      -webkit-font-smoothing:antialiased;
     }
 
-    body::after {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
-      opacity: .028;
-      pointer-events: none;
-      z-index: 9999;
+    .page{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:20px;
     }
 
-    .page {
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      padding: 18px;
-      position: relative;
-      isolation: isolate;
+    .card{
+      width:min(100%,440px);
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:26px;
+      box-shadow:var(--shadow);
+      overflow:hidden;
     }
 
-    .orb {
-      position: absolute;
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: -1;
-      animation: float 7s ease-in-out infinite;
-    }
-    .orb-one {
-      width: 240px; height: 240px;
-      left: max(16px, calc(50% - 440px));
-      top: 8%;
-      background: radial-gradient(circle at 40% 40%, rgba(255,255,255,.60), rgba(255,255,255,.10));
-      filter: blur(2px);
-      opacity: .55;
-    }
-    .orb-two {
-      width: 160px; height: 160px;
-      right: max(12px, calc(50% - 440px));
-      bottom: 12%;
-      background: radial-gradient(circle, rgba(0,166,80,.18), transparent 70%);
-      filter: blur(1px);
-      opacity: .60;
-      animation-delay: -2.4s;
-    }
-    .orb-three {
-      width: 100px; height: 100px;
-      right: max(70px, calc(50% - 360px));
-      top: 20%;
-      background: radial-gradient(circle, rgba(245,183,0,.22), transparent 70%);
-      filter: blur(1px);
-      opacity: .45;
-      animation-delay: -4.8s;
+    .brand-bar{
+      height:6px;
+      background:linear-gradient(90deg,var(--yellow),#ffd400 52%,var(--green) 52%,var(--green));
     }
 
-    /* ── CARD ── */
-    .card {
-      width: min(100%, 424px);
-      position: relative;
-      overflow: hidden;
-      border-radius: var(--radius);
-      padding: 28px 23px 20px;
-      text-align: center;
-      background:
-        linear-gradient(175deg, rgba(255,255,255,.72) 0%, rgba(255,255,255,.28) 100%),
-        rgba(255,252,239,.97);
-      border: 1px solid rgba(255,255,255,.90);
-      box-shadow:
-        0 1px 0   rgba(255,255,255,.90) inset,
-        0 -1px 0  rgba(0,0,0,.04) inset,
-        0 4px 16px rgba(0,0,0,.06),
-        0 20px 60px rgba(0,0,0,.14),
-        0 48px 120px rgba(0,0,0,.18);
-      isolation: isolate;
-      animation: cardIn .6s cubic-bezier(.16,.86,.32,1) both;
+    .content{
+      padding:28px 24px 22px;
+      text-align:center;
     }
 
-    .card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      padding: 1.5px;
-      border-radius: inherit;
-      background: linear-gradient(140deg,
-        rgba(255,255,255,.95) 0%,
-        rgba(0,166,80,.50) 40%,
-        rgba(245,183,0,.80) 70%,
-        rgba(255,255,255,.50) 100%
-      );
-      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-      -webkit-mask-composite: xor;
-      mask-composite: exclude;
-      z-index: -1;
+    .logo{
+      width:70px;
+      height:70px;
+      display:block;
+      margin:0 auto 12px;
+      border-radius:18px;
+      border:1px solid #e8e8e8;
+      object-fit:contain;
+      background:#fff;
+      box-shadow:0 8px 24px rgba(0,0,0,.08);
     }
 
-    .card::after {
-      content: "";
-      position: absolute;
-      width: 200px; height: 200px;
-      right: -100px; top: 60px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(0,166,80,.09), transparent 70%);
-      z-index: -1;
+    .brand{
+      font-size:12px;
+      font-weight:800;
+      color:var(--green-dark);
+      letter-spacing:.07em;
+      text-transform:uppercase;
+      margin-bottom:10px;
     }
 
-    .top-line {
-      position: absolute;
-      inset: 0 0 auto 0;
-      height: 5px;
-      background: linear-gradient(90deg,
-        var(--green) 0%,
-        #00C960 25%,
-        var(--yellow) 50%,
-        var(--gold) 75%,
-        var(--green) 100%
-      );
-      background-size: 200% 100%;
-      animation: stripeSweep 4s linear infinite;
-      z-index: 2;
+    h1{
+      max-width:365px;
+      margin:0 auto;
+      font-size:clamp(30px,8vw,40px);
+      line-height:1.03;
+      letter-spacing:-1.4px;
+      font-weight:800;
     }
 
-    .sparkle {
-      position: absolute;
-      border-radius: 50%;
-      background: var(--gold);
-      box-shadow: 0 0 0 5px rgba(245,183,0,.15);
-      opacity: .70;
-      animation: pulse 3s ease-in-out infinite;
-    }
-    .sparkle-one { width:9px; height:9px; left:36px; top:120px; }
-    .sparkle-two { width:6px; height:6px; right:38px; top:310px; animation-delay:-1.3s; }
+    h1 span{color:var(--green)}
 
-    /* ── TAG ── */
-    .tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 14px;
-      border-radius: 999px;
-      background: var(--black);
-      color: var(--white);
-      font-size: 10.5px;
-      font-weight: 800;
-      letter-spacing: .09em;
-      text-transform: uppercase;
-      box-shadow: 0 8px 28px rgba(0,0,0,.22), 0 2px 0 rgba(255,255,255,.08) inset;
-      animation: cardIn .6s .08s cubic-bezier(.16,.86,.32,1) both;
-    }
-    .tag .dot {
-      width: 8px; height: 8px;
-      border-radius: 50%;
-      background: var(--green);
-      box-shadow: 0 0 0 3px rgba(0,166,80,.25);
-      animation: blink 2s ease-in-out infinite;
+    .sub{
+      max-width:355px;
+      margin:13px auto 0;
+      color:#444;
+      font-size:15px;
+      line-height:1.45;
     }
 
-    /* ── LOGO ── */
-    .logo {
-      width: 80px; height: 80px;
-      margin: 18px auto 14px;
-      border-radius: 26px;
-      overflow: hidden;
-      background: var(--white);
-      border: 2px solid rgba(12,12,12,.08);
-      box-shadow:
-        0 0 0 6px rgba(255,230,0,.18),
-        0 12px 40px rgba(0,0,0,.16);
-      position: relative;
-      animation: logoIn .7s .14s cubic-bezier(.16,.86,.32,1) both;
-    }
-    .logo::after {
-      content: "";
-      position: absolute;
-      inset: -45%;
-      background: linear-gradient(118deg, transparent 34%, rgba(255,255,255,.70) 50%, transparent 66%);
-      transform: translateX(-90%) rotate(20deg);
-      animation: logoShine 5s ease-in-out infinite;
-    }
-    .logo img {
-      width: 100%; height: 100%;
-      object-fit: contain;
-      display: block;
-      border-radius: 24px;
+    .trust{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:8px;
+      margin:20px 0;
     }
 
-    /* ── BRAND ── */
-    .brand {
-      margin-bottom: 8px;
-      color: var(--green-dark);
-      font-size: 10px;
-      font-weight: 800;
-      letter-spacing: .16em;
-      text-transform: uppercase;
-      animation: fadeUp .5s .2s ease both;
+    .trust-item{
+      min-height:66px;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      gap:5px;
+      padding:9px 6px;
+      background:#fafaf8;
+      border:1px solid var(--line);
+      border-radius:14px;
+      font-size:11px;
+      line-height:1.2;
+      font-weight:700;
+      color:#333;
     }
 
-    /* ── HEADLINE ── */
-    h1 {
-      max-width: 320px;
-      margin: 0 auto;
-      font-family: "Bricolage Grotesque", "Sora", Arial, sans-serif;
-      font-size: clamp(34px, 9vw, 46px);
-      line-height: .88;
-      letter-spacing: -2px;
-      font-weight: 800;
-      text-wrap: balance;
-      animation: fadeUp .55s .26s ease both;
-    }
-    h1 .green { color: var(--green-dark); }
-
-    /* ── SUB ── */
-    .sub {
-      max-width: 272px;
-      margin: 12px auto 0;
-      color: var(--text);
-      font-size: 13.5px;
-      line-height: 1.38;
-      font-weight: 500;
-      text-wrap: balance;
-      animation: fadeUp .55s .32s ease both;
+    .trust-item strong{
+      font-size:18px;
+      line-height:1;
     }
 
-    /* ── CHIPS ── */
-    .chips {
-      display: flex;
-      justify-content: center;
-      gap: 6px;
-      flex-wrap: wrap;
-      margin: 16px 0 18px;
-      animation: fadeUp .55s .38s ease both;
-    }
-    .chip {
-      padding: 7px 11px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.82);
-      border: 1px solid rgba(12,12,12,.08);
-      color: var(--text);
-      font-size: 11.5px;
-      line-height: 1;
-      font-weight: 700;
-      box-shadow: 0 2px 8px rgba(0,0,0,.06), 0 1px 0 rgba(255,255,255,.9) inset;
-      transition: transform .15s ease, box-shadow .15s ease;
-    }
-    .chip:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 18px rgba(0,0,0,.10), 0 1px 0 rgba(255,255,255,.9) inset;
+    .cta{
+      width:100%;
+      min-height:58px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:0 16px;
+      border-radius:15px;
+      background:var(--green);
+      color:white;
+      font-size:18px;
+      font-weight:800;
+      text-decoration:none;
+      box-shadow:0 8px 20px rgba(18,140,75,.23);
+      transition:transform .12s ease,background .12s ease;
+      -webkit-tap-highlight-color:transparent;
     }
 
-    /* ── CTA BUTTON ── */
-    .cta {
-      width: 100%;
-      min-height: 60px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 9px;
-      padding: 0 18px;
-      flex-wrap: nowrap;
-      white-space: nowrap;
-      border-radius: 20px;
-      background: linear-gradient(180deg, #32E77A 0%, #00C853 45%, #00A650 100%);
-      color: var(--black);
-      text-decoration: none;
-      font-family: "Bricolage Grotesque", "Sora", Arial, sans-serif;
-      font-size: 20px;
-      line-height: 1;
-      letter-spacing: -.4px;
-      font-weight: 800;
-      box-shadow:
-        0 8px 0 #006D34,
-        0 10px 0 rgba(0,0,0,.12),
-        0 22px 44px rgba(0,0,0,.20);
-      transition: transform .13s ease, box-shadow .13s ease;
-      -webkit-tap-highlight-color: transparent;
-      position: relative;
-      overflow: hidden;
-      animation: fadeUp .6s .44s ease both;
-    }
-    .cta::before {
-      content: "";
-      position: absolute;
-      inset: -50% auto -50% -40%;
-      width: 36%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,.58), transparent);
-      transform: skewX(-18deg);
-      animation: btnShine 3.8s ease-in-out infinite;
-      pointer-events: none;
-    }
-    .cta::after {
-      content: "";
-      position: absolute;
-      top: 0; left: 12px; right: 12px;
-      height: 1px;
-      background: rgba(255,255,255,.55);
-      border-radius: 999px;
-    }
-    .cta:hover {
-      transform: translateY(-2px);
-      box-shadow:
-        0 10px 0 #006D34,
-        0 12px 0 rgba(0,0,0,.12),
-        0 28px 52px rgba(0,0,0,.22);
-    }
-    .cta:active {
-      transform: translateY(6px);
-      box-shadow:
-        0 2px 0 #006D34,
-        0 3px 0 rgba(0,0,0,.10),
-        0 8px 16px rgba(0,0,0,.14);
+    .cta:hover{background:var(--green-dark);transform:translateY(-1px)}
+    .cta:active{transform:translateY(1px)}
+    .cta svg{width:23px;height:23px;flex:0 0 auto}
+
+    .next-step{
+      margin-top:12px;
+      padding:12px 13px;
+      border-radius:13px;
+      background:var(--green-soft);
+      color:#245136;
+      font-size:12.5px;
+      line-height:1.4;
+      font-weight:600;
     }
 
-    .cta svg { width:22px; height:22px; flex:0 0 auto; position:relative; z-index:1; }
-    .cta-text { position:relative; z-index:1; }
-
-    /* ── NOTE ── */
-    .note {
-      margin-top: 11px;
-      color: var(--muted);
-      font-size: 11.5px;
-      font-weight: 600;
-      animation: fadeUp .5s .50s ease both;
+    .security{
+      margin-top:16px;
+      color:var(--muted);
+      font-size:11.5px;
+      line-height:1.45;
     }
 
-    /* ── FOOTER ── */
-    .foot {
-      max-width: 300px;
-      margin: 13px auto 0;
-      padding-top: 12px;
-      border-top: 1px solid var(--line);
-      color: #787878;
-      font-size: 10px;
-      line-height: 1.44;
-      font-weight: 500;
-      animation: fadeUp .5s .55s ease both;
-    }
-    .foot strong { color: #424242; font-weight: 800; }
-
-    /* ── KEYFRAMES ── */
-    @keyframes cardIn {
-      from { opacity:0; transform:translateY(18px) scale(.982); }
-      to   { opacity:1; transform:translateY(0)    scale(1); }
-    }
-    @keyframes logoIn {
-      from { opacity:0; transform:translateY(10px) scale(.90); }
-      to   { opacity:1; transform:translateY(0)    scale(1); }
-    }
-    @keyframes fadeUp {
-      from { opacity:0; transform:translateY(10px); }
-      to   { opacity:1; transform:translateY(0); }
-    }
-    @keyframes float {
-      0%,100% { transform:translate3d(0,0,0); }
-      50%      { transform:translate3d(0,-16px,0); }
-    }
-    @keyframes stripeSweep {
-      0%   { background-position:200% 0; }
-      100% { background-position:-200% 0; }
-    }
-    @keyframes logoShine {
-      0%,58%   { transform:translateX(-90%) rotate(20deg); }
-      76%,100% { transform:translateX(90%)  rotate(20deg); }
-    }
-    @keyframes btnShine {
-      0%,55%   { left:-42%; }
-      80%,100% { left:115%; }
-    }
-    @keyframes blink {
-      0%,100% { opacity:1;   box-shadow:0 0 0 3px rgba(0,166,80,.25); }
-      50%      { opacity:.4;  box-shadow:0 0 0 5px rgba(0,166,80,.10); }
-    }
-    @keyframes pulse {
-      0%,100% { transform:scale(1);    opacity:.68; }
-      50%      { transform:scale(1.38); opacity:.30; }
+    .footer{
+      padding:14px 20px 17px;
+      text-align:center;
+      border-top:1px solid var(--line);
+      background:#fbfbfa;
+      color:#777;
+      font-size:10.5px;
+      line-height:1.5;
     }
 
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { animation:none !important; transition:none !important; opacity:1 !important; }
-    }
+    .footer strong{color:#424242}
 
-    @media (max-width:380px) {
-      .page  { padding:10px; }
-      .card  { border-radius:28px; padding:20px 14px 16px; }
-      .tag   { font-size:9.5px; }
-      .logo  { width:68px; height:68px; border-radius:22px; }
-      .brand { font-size:9.5px; }
-      h1     { font-size: 30px; letter-spacing:-1.6px; }
-      .sub   { font-size:13px; }
-      .cta   { min-height:54px; font-size:17px; }
-      .sparkle { display:none; }
+    @media (max-width:380px){
+      .page{padding:10px}
+      .content{padding:23px 16px 18px}
+      .card{border-radius:22px}
+      .trust{gap:6px}
+      .trust-item{font-size:10.5px}
+      .cta{font-size:17px}
     }
   </style>
 </head>
+
 <body>
   <main class="page">
-    <span class="orb orb-one"   aria-hidden="true"></span>
-    <span class="orb orb-two"   aria-hidden="true"></span>
-    <span class="orb orb-three" aria-hidden="true"></span>
+    <section class="card" aria-label="Convite para entrar no grupo Rei dos Achadinhos Brasil">
+      <div class="brand-bar" aria-hidden="true"></div>
 
-    <section class="card" aria-label="Convite para entrar no grupo do WhatsApp">
-      <span class="top-line"            aria-hidden="true"></span>
-      <span class="sparkle sparkle-one" aria-hidden="true"></span>
-      <span class="sparkle sparkle-two" aria-hidden="true"></span>
+      <div class="content">
+        <img class="logo" src="coroa-rei.png" alt="Logo Rei dos Achadinhos Brasil" />
 
-      <div class="tag">
-        <span class="dot" aria-hidden="true"></span>
-        Grupo gratuito
+        <p class="brand">Rei dos Achadinhos Brasil</p>
+
+        <h1>
+          Ofertas boas do Mercado Livre, direto no seu <span>WhatsApp.</span>
+        </h1>
+
+        <p class="sub">
+          Entre grátis no nosso grupo e receba achadinhos selecionados ao longo do dia.
+        </p>
+
+        <div class="trust" aria-label="Informações importantes">
+          <div class="trust-item">
+            <strong>✓</strong>
+            Grátis
+          </div>
+          <div class="trust-item">
+            <strong>✓</strong>
+            Sem cadastro
+          </div>
+          <div class="trust-item">
+            <strong>✓</strong>
+            Saia quando quiser
+          </div>
+        </div>
+
+        <a
+          id="btn-whatsapp"
+          class="cta"
+          href="https://chat.whatsapp.com/LSihkdecPKW2g0qkbdzDbC"
+          aria-label="Abrir convite do grupo no WhatsApp"
+        >
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M16.1 4.8A11.1 11.1 0 0 0 6.6 21.7L5.4 26.6l5-1.3a11.1 11.1 0 1 0 5.7-20.5Z" fill="none" stroke="currentColor" stroke-width="2.7" stroke-linejoin="round"/>
+            <path d="M12 10.6c-.22-.5-.46-.52-.67-.53h-.58c-.2 0-.52.08-.8.38-.27.3-1.05 1.02-1.05 2.48s1.08 2.87 1.23 3.06c.15.2 2.07 3.28 5.12 4.49 2.54 1 3.05.8 3.6.74.55-.05 1.79-.73 2.04-1.45.25-.71.25-1.32.17-1.45-.07-.12-.27-.2-.57-.35-.3-.15-1.79-.88-2.07-.98-.28-.1-.48-.15-.68.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.08-.3-.15-1.27-.47-2.4-1.49-.9-.8-1.5-1.78-1.67-2.08-.17-.3-.02-.47.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.65-1.6-.88-2.18Z" fill="currentColor"/>
+          </svg>
+          Abrir convite no WhatsApp
+        </a>
+
+        <p class="next-step">
+          Você verá o convite no próprio WhatsApp e só entra depois de confirmar.
+        </p>
+
+        <p class="security">
+          Esta página não solicita nome, e-mail, cartão ou pagamento.
+        </p>
       </div>
 
-      <div class="logo">
-        <img src="coroa-rei.png" alt="Logo Rei dos Achadinhos Brasil" />
-      </div>
-
-      <p class="brand">Rei dos Achadinhos Brasil</p>
-
-      <h1>
-        Achadinhos bons e baratos no seu <span class="green">WhatsApp</span>
-      </h1>
-
-      <p class="sub">
-        Ofertas do Mercado Livre direto no seu WhatsApp. Grátis, sem cadastro.
-      </p>
-
-      <div class="chips" aria-label="Destaques do grupo">
-        <div class="chip">✅ Gratuito</div>
-        <div class="chip">✅ Sem cadastro</div>
-        <div class="chip">✅ Saia quando quiser</div>
-      </div>
-
-      <a
-        id="btn-whatsapp"
-        class="cta"
-        href="https://chat.whatsapp.com/LSihkdecPKW2g0qkbdzDbC"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Entrar no grupo pelo WhatsApp"
-      >
-        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M16.1 4.8A11.1 11.1 0 0 0 6.6 21.7L5.4 26.6l5-1.3a11.1 11.1 0 1 0 5.7-20.5Z" fill="none" stroke="#111111" stroke-width="3" stroke-linejoin="round"/>
-          <path d="M12 10.6c-.22-.5-.46-.52-.67-.53h-.58c-.2 0-.52.08-.8.38-.27.3-1.05 1.02-1.05 2.48s1.08 2.87 1.23 3.06c.15.2 2.07 3.28 5.12 4.49 2.54 1 3.05.8 3.6.74.55-.05 1.79-.73 2.04-1.45.25-.71.25-1.32.17-1.45-.07-.12-.27-.2-.57-.35-.3-.15-1.79-.88-2.07-.98-.28-.1-.48-.15-.68.15-.2.3-.77.98-.95 1.18-.17.2-.35.22-.65.08-.3-.15-1.27-.47-2.4-1.49-.9-.8-1.5-1.78-1.67-2.08-.17-.3-.02-.47.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.65-1.6-.88-2.18Z" fill="#111111"/>
-        </svg>
-        <span class="cta-text">Entrar no grupo grátis</span>
-      </a>
-
-      <p class="note">Toque e confirme no WhatsApp — é rápido.</p>
-
-      <p class="foot">
-        <strong>Página independente de afiliado.</strong>
-        Links do Mercado Livre.
-      </p>
+      <footer class="footer">
+        <strong>Projeto independente de afiliado.</strong>
+        Não somos o Mercado Livre. Alguns links compartilhados podem gerar comissão, sem custo extra para você.
+      </footer>
     </section>
   </main>
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const btn = document.getElementById("btn-whatsapp");
-  
-      if (btn) {
-        btn.addEventListener("click", function () {
-  
-          // Google Analytics
-          if (typeof gtag === "function") {
-            gtag("event", "clique_whatsapp", {
-              event_category: "engajamento",
-              event_label: btn.id,
-              link_url: btn.href,
-              page_title: document.title,
-              transport_type: "beacon"
-            });
-          }
-  
-          // Meta Pixel
-          if (typeof fbq === "function") {
-            fbq("track", "Lead", {
-              content_name: "Clique para entrar no grupo WhatsApp"
-            });
-          }
-  
-        });
-      }
+
+      if (!btn) return;
+
+      btn.addEventListener("click", function () {
+        // GA4: mede a intenção real de abrir o convite do WhatsApp.
+        if (typeof gtag === "function") {
+          gtag("event", "whatsapp_invite_click", {
+            event_category: "conversion_intent",
+            event_label: "grupo_rei_dos_achadinhos",
+            link_url: btn.href,
+            transport_type: "beacon"
+          });
+        }
+
+        // Meta: evento personalizado para NÃO confundir clique com "Lead real".
+        // Depois, crie uma Conversão Personalizada baseada em WhatsAppInviteClick.
+        if (typeof fbq === "function") {
+          fbq("trackCustom", "WhatsAppInviteClick", {
+            destination: "whatsapp_group_invite"
+          });
+        }
+      });
     });
   </script>
 </body>
